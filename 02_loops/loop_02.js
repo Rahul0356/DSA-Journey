@@ -55,3 +55,25 @@ let results = findLargest(arr3);
 console.log(results); 
 
 
+// find the second largest number in an array
+
+function secondLargest(arr5){
+    let firstLargest = -Infinity;
+    let secondLargest = -Infinity;
+
+    for(let i=0;i< arr5.length;i++){
+        if(arr5[i]>firstLargest){
+            secondLargest = firstLargest;
+            firstLargest = arr5[i];
+        } else if(arr5[i]>secondLargest){
+            secondLargest = arr5[i];
+        }
+    }
+    return secondLargest;
+}
+
+let arr5 = [4,2,8,10,30,6];
+
+let resultss = secondLargest(arr5)
+
+console.log(resultss);
